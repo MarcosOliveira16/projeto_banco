@@ -1,10 +1,10 @@
 package entidade;
 
 public class Conta {
-    private Pessoa titular;
-    private int numConta;
-    private double saldo;
-    
+    protected Pessoa titular;
+    protected int numConta;
+    protected double saldo;
+
     public Conta(Pessoa titular, int numConta, double saldo) {
         this.titular = titular;
         this.numConta = numConta;
@@ -21,6 +21,14 @@ public class Conta {
 
     public double getSaldo() {
         return saldo;
+    }
+
+    public void depositar(double valor) {
+        this.saldo += valor;
+    }
+
+    public void sacar(double valor) {
+        this.saldo -= valor;
     }
 
 }
