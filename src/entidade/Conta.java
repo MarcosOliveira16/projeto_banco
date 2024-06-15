@@ -1,9 +1,11 @@
 package entidade;
 
+import java.security.PublicKey;
+
 public class Conta {
-    private Pessoa titular;
-    private int numConta;
-    private double saldo;
+    protected Pessoa titular;
+    protected int numConta;
+    protected double saldo;
     
     public Conta(Pessoa titular, int numConta, double saldo) {
         this.titular = titular;
@@ -11,16 +13,26 @@ public class Conta {
         this.saldo = saldo;
     }
 
-    public Pessoa getTitular() {
+    protected Pessoa getTitular() {
         return titular;
     }
 
-    public int getNumConta() {
+    protected int getNumConta() {
         return numConta;
     }
 
-    public double getSaldo() {
+    protected double getSaldo() {
         return saldo;
+    }
+    protected void depositar(double deposito){
+        saldo +=deposito;
+    }
+    protected void saque(double saque){
+        if(saldo<saque){
+            System.out.println("Saldo insuficiente ");
+        }else{
+            saldo-=saque;
+        }
     }
 
 }
