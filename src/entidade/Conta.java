@@ -1,7 +1,5 @@
 package entidade;
 
-import java.security.PublicKey;
-
 public class Conta {
     protected Pessoa titular;
     protected int numConta;
