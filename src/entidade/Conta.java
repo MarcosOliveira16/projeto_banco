@@ -23,22 +23,14 @@ public class Conta {
         return saldo;
     }
     protected void depositar(double deposito){
-        saldo +=deposito;
+        saldo += deposito;
     }
     protected void saque(double saque){
-        if(saldo<saque){
+        if(saldo < saque){
             System.out.println("Saldo insuficiente ");
         }else{
-            saldo-=saque;
+            saldo -= saque;
         }
-    }
-
-    public void depositar(double valor) {
-        this.saldo += valor;
-    }
-
-    public void sacar(double valor) {
-        this.saldo -= valor;
     }
 
 }
