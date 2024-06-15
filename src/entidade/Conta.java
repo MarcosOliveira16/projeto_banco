@@ -1,34 +1,36 @@
 package entidade;
 
 public class Conta {
-    protected Pessoa titular;
-    protected int numConta;
-    protected double saldo;
-
+    private Pessoa titular;
+    private int numConta;
+    private double saldo;
+    
     public Conta(Pessoa titular, int numConta, double saldo) {
         this.titular = titular;
         this.numConta = numConta;
         this.saldo = saldo;
     }
 
-    public Pessoa getTitular() {
+    protected Pessoa getTitular() {
         return titular;
     }
 
-    public int getNumConta() {
+    protected int getNumConta() {
         return numConta;
     }
 
-    public double getSaldo() {
+    protected double getSaldo() {
         return saldo;
     }
-
-    public void depositar(double valor) {
-        this.saldo += valor;
+    protected void depositar(double deposito){
+        saldo += deposito;
     }
-
-    public void sacar(double valor) {
-        this.saldo -= valor;
+    protected void saque(double saque){
+        if(saldo < saque){
+            System.out.println("Saldo insuficiente ");
+        }else{
+            saldo -= saque;
+        }
     }
 
 }
