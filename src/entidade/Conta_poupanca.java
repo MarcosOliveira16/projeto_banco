@@ -8,7 +8,7 @@ public class Conta_poupanca extends Conta {
         taxa_redendimento = 0.0005;
 
         System.out.println("Conta poupança aberta com sucesso\nDados:");
-        System.out.println(titular);
+        System.out.println(titular.getConta().toString());
     }
 
     public double getTaxa_redendimento() {
@@ -18,7 +18,8 @@ public class Conta_poupanca extends Conta {
     public void Rendimento(int tempo) {
         if (getSaldo() >= 100) {
             System.out.println(
-                    "No periodo : " + tempo + " o redimento foi de : " + (getSaldo() * Math.pow((1 + taxa_redendimento), tempo)));
+                    "No periodo : " + tempo + " o redimento foi de : "
+                            + (getSaldo() * Math.pow((1 + taxa_redendimento), tempo)));
         } else {
             System.out.println("Saldo insuficiente para rendimento;");
         }
