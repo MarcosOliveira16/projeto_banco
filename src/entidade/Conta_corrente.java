@@ -10,7 +10,7 @@ public class Conta_corrente extends Conta {
         else
             this.liberadoPoupanca = false;
 
-        System.out.println("Conta corrente aberta com sucesso\nDados:");
-        System.out.println(titular.getConta().toString());
+        System.out.println("Conta corrente aberta com sucesso");
+       
     }
 }
