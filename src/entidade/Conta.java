@@ -32,7 +32,7 @@ public class Conta {
     }
 
     protected void depositar(double deposito) {
-        saldo += deposito;
+        this.saldo += deposito;
     }
 
     protected void saque(double saque) {
@@ -42,6 +42,4 @@ public class Conta {
             saldo -= saque;
         }
     }
-
-    
 }
