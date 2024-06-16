@@ -10,6 +10,8 @@ public class Pessoa {
         this.nome = nome;
         this.idade = idade;
         this.CPF = CPF;
+
+        System.out.println("Cadastro realizado com sucesso");
     }
 
     public String getNome() {

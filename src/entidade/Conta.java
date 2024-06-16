@@ -6,8 +6,11 @@ public class Conta {
     private double saldo;
 
     public Conta() {
-        this.numConta = metodo;
+        this.numConta = (int)(Math.random()*(9999-1000))-1000;
         this.saldo = 0;
+    }
+    protected void addTitular(Pessoa titular) {
+        this.titular = titular;
     }
 
     protected Pessoa getTitular() {
@@ -39,7 +42,5 @@ public class Conta {
         }
     }
 
-    protected void addTitular(Pessoa titular) {
-        this.titular = titular;
-    }
+    
 }
