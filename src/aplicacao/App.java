@@ -2,7 +2,6 @@ package aplicacao;
 
 import java.util.Scanner;
 
-import entidade.Conta;
 import entidade.Conta_corrente;
 import entidade.Conta_poupanca;
 import entidade.Pessoa;
@@ -16,7 +15,8 @@ public class App {
         String cpf;
         int esc;
         Pessoa pessoa;
-        Conta conta;
+        Conta_poupanca conta_poup;
+        Conta_corrente conta_core;
 
         System.out.println("Hello, World!");
         while(true){
@@ -28,7 +28,8 @@ public class App {
             System.out.println("Informe sua Idade");
             idade =sc.nextInt();
             System.out.println("Informe seu CPF");
-            cpf =sc.next();
+            sc.nextLine();
+            cpf =sc.nextLine();
             pessoa =new Pessoa(nome,idade,cpf);
             System.out.println("Menu");
             System.out.println("1--Abrir uma conta poupança");
@@ -37,15 +38,12 @@ public class App {
             while (true) {
                 switch (esc) {
                     case 1:
-                        conta = new Conta_poupanca();
-                        conta.addTitular(pessoa);
                         
                         conta_poup = new Conta_poupanca(pessoa);
                         sc.nextLine();
                         break;
-    
+
                     case 2:
-                        conta = new Conta_corrente();
                         conta_core = new Conta_corrente(pessoa);
                         sc.nextLine();
                         break;    
@@ -55,6 +53,23 @@ public class App {
                         break;
                 }
                 break;
+            }
+            while (true) {
+                System.out.println("Menu");
+                System.out.println("1-Deposito");
+                System.out.println("2-Saque");
+                System.out.println("3-Extrato");
+                System.out.println("4-rendimento conta poupança");
+                esc = sc.nextInt();
+                switch (esc) {
+                    case 1:
+                        
+                        break;
+                
+                    default:
+                        break;
+                }
+                
             }
             
         }
