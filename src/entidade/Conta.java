@@ -5,11 +5,12 @@ public class Conta {
     protected int numConta;
     protected double saldo;
 
-    public Conta() {
+    public Conta(Pessoa titular) {
         this.numConta = (int)(Math.random()*(9999-1000))-1000;
         this.saldo = 0;
+        addTitular(titular);
     }
-    protected void addTitular(Pessoa titular) {
+    public void addTitular(Pessoa titular) {
         this.titular = titular;
     }
 
@@ -26,7 +27,7 @@ public class Conta {
     }
 
     public String toString() {
-        String texto = titular + "\nNÚMERO DA CONTA: " + numConta + "\nSALDO: " + saldo;
+        String texto = this.titular + "\nNÚMERO DA CONTA: " + this.numConta + "\nSALDO: " + this.saldo;
         return texto;
     }
 

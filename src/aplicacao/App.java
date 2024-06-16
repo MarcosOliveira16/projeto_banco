@@ -39,10 +39,15 @@ public class App {
                     case 1:
                         conta = new Conta_poupanca();
                         conta.addTitular(pessoa);
+                        
+                        conta_poup = new Conta_poupanca(pessoa);
+                        sc.nextLine();
                         break;
     
                     case 2:
                         conta = new Conta_corrente();
+                        conta_core = new Conta_corrente(pessoa);
+                        sc.nextLine();
                         break;    
                     
                     default:
