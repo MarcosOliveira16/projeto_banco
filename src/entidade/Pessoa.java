@@ -35,7 +35,7 @@ public class Pessoa {
                 nome +
                 "\nIDADE: " +
                 idade +
-                "CPF: " +
+                "\nCPF: " +
                 CPF;
     }
 
