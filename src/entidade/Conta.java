@@ -5,10 +5,9 @@ public class Conta {
     private int numConta;
     private double saldo;
 
-    public Conta(Pessoa titular, int numConta, double saldo) {
-        this.titular = titular;
-        this.numConta = numConta;
-        this.saldo = saldo;
+    public Conta() {
+        this.numConta = metodo;
+        this.saldo = 0;
     }
 
     protected Pessoa getTitular() {

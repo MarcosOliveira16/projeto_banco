@@ -4,7 +4,7 @@ public class Conta_corrente extends Conta {
     private boolean liberadoPoupanca;
 
     public Conta_corrente(Pessoa titular, int numConta, double saldo) {
-        super(titular, numConta, saldo);
+        super(numConta, saldo);
         if (saldo >= 100)
             this.liberadoPoupanca = true;
         else
@@ -12,5 +12,11 @@ public class Conta_corrente extends Conta {
 
         System.out.println("Conta corrente aberta com sucesso\nDados:");
         System.out.println(titular.getConta().toString());
+    }
+
+    @Override
+    public String toString() {
+        String texto = this.getTitular() + "\nNÚMERO DA CONTA: " + this.getNumConta() + "\nSALDO: " + this.getSaldo();
+        return texto;
     }
 }
