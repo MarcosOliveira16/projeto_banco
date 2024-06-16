@@ -3,9 +3,9 @@ package entidade;
 public class Conta_corrente extends Conta {
     private boolean liberadoPoupanca;
 
-    public Conta_corrente(Pessoa titular, int numConta, double saldo) {
-        super(titular, numConta, saldo);
-        if (saldo >= 100)
+    public Conta_corrente(Pessoa titular) {
+        super(titular);
+        if (getSaldo() >= 100)
             this.liberadoPoupanca = true;
         else
             this.liberadoPoupanca = false;

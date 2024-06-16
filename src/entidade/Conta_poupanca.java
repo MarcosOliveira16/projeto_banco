@@ -3,8 +3,7 @@ package entidade;
 public class Conta_poupanca extends Conta {
     private double taxa_redendimento;
 
-    public Conta_poupanca(Pessoa titular, int numConta, double saldo) {
-        super(titular, numConta, saldo);
+    public Conta_poupanca() {
         taxa_redendimento = 0.0005;
 
         System.out.println("Conta poupança aberta com sucesso\nDados:");
