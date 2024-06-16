@@ -1,9 +1,9 @@
 package entidade;
 
 public class Conta {
-    private Pessoa titular;
-    private int numConta;
-    private double saldo;
+    protected Pessoa titular;
+    protected int numConta;
+    protected double saldo;
 
     public Conta() {
         this.numConta = (int)(Math.random()*(9999-1000))-1000;

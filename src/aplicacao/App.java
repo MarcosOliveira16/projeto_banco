@@ -2,6 +2,7 @@ package aplicacao;
 
 import java.util.Scanner;
 
+import entidade.Conta;
 import entidade.Conta_corrente;
 import entidade.Conta_poupanca;
 import entidade.Pessoa;
@@ -15,8 +16,7 @@ public class App {
         String cpf;
         int esc;
         Pessoa pessoa;
-        Conta_poupanca conta_poup;
-        Conta_corrente conta_core;
+        Conta conta;
 
         System.out.println("Hello, World!");
         while(true){
@@ -37,12 +37,12 @@ public class App {
             while (true) {
                 switch (esc) {
                     case 1:
-                        
-                        conta_poup = new Conta_poupanca(pessoa);
+                        conta = new Conta_poupanca();
+                        conta.addTitular(pessoa);
                         break;
     
                     case 2:
-                        conta_core = new Conta_corrente(pessoa);
+                        conta = new Conta_corrente();
                         break;    
                     
                     default:
