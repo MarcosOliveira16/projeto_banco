@@ -4,11 +4,13 @@ public class Conta {
     private Pessoa titular;
     private int numConta;
     private double saldo;
-    
-    public Conta(Pessoa titular, int numConta, double saldo) {
+
+    public Conta() {
+        this.numConta = (int)(Math.random()*(9999-1000))-1000;
+        this.saldo = 0;
+    }
+    protected void addTitular(Pessoa titular) {
         this.titular = titular;
-        this.numConta = numConta;
-        this.saldo = saldo;
     }
 
     protected Pessoa getTitular() {
@@ -22,23 +24,23 @@ public class Conta {
     protected double getSaldo() {
         return saldo;
     }
-    protected void depositar(double deposito){
-        saldo +=deposito;
+
+    public String toString() {
+        String texto = titular + "\nNÚMERO DA CONTA: " + numConta + "\nSALDO: " + saldo;
+        return texto;
     }
-    protected void saque(double saque){
-        if(saldo<saque){
+
+    protected void depositar(double deposito) {
+        saldo += deposito;
+    }
+
+    protected void saque(double saque) {
+        if (saldo < saque) {
             System.out.println("Saldo insuficiente ");
-        }else{
-            saldo-=saque;
+        } else {
+            saldo -= saque;
         }
     }
 
-    public void depositar(double valor) {
-        this.saldo += valor;
-    }
-
-    public void sacar(double valor) {
-        this.saldo -= valor;
-    }
-
+    
 }

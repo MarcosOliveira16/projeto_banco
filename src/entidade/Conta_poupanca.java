@@ -3,21 +3,26 @@ package entidade;
 public class Conta_poupanca extends Conta {
     private double taxa_redendimento;
 
-    public Conta_poupanca(Pessoa titular,int numConta, double saldo){
-        super(titular, numConta,saldo);
+    public Conta_poupanca() {
         taxa_redendimento = 0.0005;
+
+        System.out.println("Conta poupança aberta com sucesso\nDados:");
+        System.out.println(titular.getConta().toString());
     }
 
     public double getTaxa_redendimento() {
         return taxa_redendimento;
     }
-    public void Rendimento(int tempo){
-        if(saldo>=100){
-            System.out.println("No periodo : "+tempo+ " foi de : "+ (saldo*Math.pow((1+taxa_redendimento),tempo)) );
-        }else{
+
+    public void Rendimento(int tempo) {
+        if (getSaldo() >= 100) {
+            System.out.println(
+                    "No periodo : " + tempo + " o redimento foi de : "
+                            + (getSaldo() * Math.pow((1 + taxa_redendimento), tempo)));
+        } else {
             System.out.println("Saldo insuficiente para rendimento;");
         }
 
-    }   
+    }
 
 }

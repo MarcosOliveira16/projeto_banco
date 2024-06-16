@@ -10,6 +10,8 @@ public class Pessoa {
         this.nome = nome;
         this.idade = idade;
         this.CPF = CPF;
+
+        System.out.println("Cadastro realizado com sucesso");
     }
 
     public String getNome() {
@@ -28,4 +30,17 @@ public class Pessoa {
         return conta;
     }
 
+    public String toString() {
+        return "NOME: " +
+                nome +
+                "\nIDADE: " +
+                idade +
+                "CPF: " +
+                CPF;
+    }
+
+    public void abrirConta(Conta conta) {
+        this.conta = conta;
+        conta.addTitular(this); // pega o objeto atual e jogar na classe 'Conta'
+    }
 }
