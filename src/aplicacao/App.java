@@ -28,7 +28,8 @@ public class App {
             System.out.println("Informe sua Idade");
             idade =sc.nextInt();
             System.out.println("Informe seu CPF");
-            cpf =sc.next();
+            sc.nextLine();
+            cpf =sc.nextLine();
             pessoa =new Pessoa(nome,idade,cpf);
             System.out.println("Menu");
             System.out.println("1--Abrir uma conta poupança");
@@ -39,10 +40,12 @@ public class App {
                     case 1:
                         
                         conta_poup = new Conta_poupanca(pessoa);
+                        sc.nextLine();
                         break;
-    
+
                     case 2:
                         conta_core = new Conta_corrente(pessoa);
+                        sc.nextLine();
                         break;    
                     
                     default:
@@ -50,6 +53,23 @@ public class App {
                         break;
                 }
                 break;
+            }
+            while (true) {
+                System.out.println("Menu");
+                System.out.println("1-Deposito");
+                System.out.println("2-Saque");
+                System.out.println("3-Extrato");
+                System.out.println("4-rendimento conta poupança");
+                esc = sc.nextInt();
+                switch (esc) {
+                    case 1:
+                        
+                        break;
+                
+                    default:
+                        break;
+                }
+                
             }
             
         }
