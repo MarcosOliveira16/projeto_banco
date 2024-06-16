@@ -26,4 +26,10 @@ public class Conta_poupanca extends Conta {
 
     }
 
+    @Override
+    public String toString() {
+        String texto = this.getTitular() + "\nNÚMERO DA CONTA: " + this.getNumConta() + "\nSALDO: " + this.getSaldo();
+        return texto;
+    }
+
 }
