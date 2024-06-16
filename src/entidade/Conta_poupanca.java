@@ -5,10 +5,7 @@ public class Conta_poupanca extends Conta {
 
     public Conta_poupanca(Pessoa titular) {
         super(titular);
-        taxa_redendimento = 0.0005;
-
-        System.out.println("Conta poupança aberta com sucesso");
-        
+        taxa_redendimento = 0.0005;        
     }
 
     public double getTaxa_redendimento() {

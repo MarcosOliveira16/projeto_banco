@@ -4,7 +4,8 @@ public class Pessoa {
     private String nome;
     private int idade;
     private String CPF;
-    private Conta conta;
+    private Conta_corrente conta_corrente;
+    private Conta_poupanca conta_poupanca;
     
 
     public Pessoa(String nome, int idade, String CPF) {
@@ -27,8 +28,12 @@ public class Pessoa {
         return CPF;
     }
 
-    public Conta getConta() {
-        return conta;
+    public Conta_corrente getContaCorrente() {
+        return conta_corrente;
+    }
+
+    public Conta_poupanca getContaPoupanca() {
+        return conta_poupanca;
     }
 
     public String toString() {
@@ -40,8 +45,8 @@ public class Pessoa {
                 CPF;
     }
 
-    public void abrirConta(Conta conta) {
-        this.conta = conta;
-        conta.addTitular(this); // pega o objeto atual e jogar na classe 'Conta'
+    public void abrirConta(Conta_corrente conta1, Conta_poupanca conta2) {
+        this.conta_corrente = conta1;
+        this.conta_poupanca = conta2;
     }
 }
